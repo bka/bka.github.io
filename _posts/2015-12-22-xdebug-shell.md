@@ -12,7 +12,7 @@ on a vagrant machine. In the following example 192.168.56.1 actually is my
 host machine which serves as a gateway for the vagrant machine. For local debugging
 remote_host needs to be set localhost.
 
-{% highlight shell %}
+{% highlight bash %}
 
 XDEBUG_CONFIG="idekey=vim" php -dxdebug.remote_host=192.168.56.1 -dxdebug.remote_enable=on -f bin/magento setup:upgrade
 
