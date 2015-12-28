@@ -4,7 +4,7 @@ date:   2015-12-28 12:36:00
 categories: Magento2
 ---
 
-**Loggin SQL queries in Magento2**
+**Logging SQL queries in Magento2**
 
 In order to enable logging of sql queries in Magento2 you need to edit ```app/etc/di.xml``` and
 change the type for ```LoggerInterface``` from ```Magento\Framework\DB\Logger\Quiet``` to ```Magento\Framework\DB\Logger\File```.
