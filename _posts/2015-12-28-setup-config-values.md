@@ -22,7 +22,9 @@ Instead of trying to use OOP and DI practice, just write them with a core db
 connection, this reduces a lot of pain. By the way, this is how other core modules
 are writing their values.
 
-{% highlight bash %}
+{% highlight php startinline %}
+<?php
+
 protected function saveConfigValue($path, $value){
   $data = [
       'scope' => 'default',
@@ -36,7 +38,9 @@ protected function saveConfigValue($path, $value){
 {% endhighlight %}
 
 
-{% highlight text %}
+{% highlight php startinline %}
+<?php
+
 $this->saveConfigValue("design/header/welcome ", "Welcome")
 {% endhighlight %}
 
