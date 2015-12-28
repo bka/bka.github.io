@@ -7,7 +7,7 @@ url: "http://bka.github.io"
 # baseurl: "/contrast" # comment out if in root directory
 
 # comments:
-    # disqus: "niklasbuschmann"
+#    disqus: ""
 #    isso: "comments.mysite.org"
 
 style:
@@ -24,11 +24,6 @@ style:
 
 links:
   - github: "https://github.com/bka/"
-  # - twitter: "https://twitter.com/me/"
-  # - google-plus: "https://plus.google.com/+me"
-  # - reddit: "https://www.reddit.com/user/me/"
-  # - youtube: "https://www.youtube.com/user/me"
-  # - steam: "http://steamcommunity.com/id/me/"
 
 paginate: 10
 excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
