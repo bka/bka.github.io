@@ -6,7 +6,11 @@ more: "read more"
 url: "http://bka.github.io"
 # baseurl: "/contrast" # comment out if in root directory
 
-# comments:
+comments :
+  provider : disqus
+  disqus :
+    short_name : bka-blog
+
 #    disqus: ""
 #    isso: "comments.mysite.org"
 
@@ -28,4 +32,8 @@ links:
 paginate: 10
 excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
-gems: [jekyll-feed, jekyll-paginate] # include feed plugin (supported by gh-pages)
+gems: [jekyll-feed, jekyll-paginate, redcarpet] # include feed plugin (supported by gh-pages)
+
+markdown: redcarpet
+redcarpet:
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
