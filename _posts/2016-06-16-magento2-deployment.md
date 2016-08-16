@@ -30,6 +30,7 @@ However on my way, I discovered some core issues in 2.0.x, which finally forced 
 This is not a bug, rather a topic not pretty well documented. For live systems you usually want to have https in place. In theory, pretty simple. Install certificate, configure your web server and set _web/secure/base\_url_. However, as we have varnish and nginx and multiple backend servers in place, I couldn't persuade them to propagate the correct http headers to Magento. I didn't want to put more time into debugging this. A workaround for forcing Magento to https internally, is to modify _pub/index.php_ and prepend some variables:
 
 {% highlight php %}
+<?php
 $_SERVER['HTTPS'] = 'on';
 $_SERVER['HTTP_X_FORWARDED_PROTO'] = 'https';
 $_SERVER['HTTP_X_FORWARDED_PORT'] = '443';
@@ -108,6 +109,7 @@ Merging all of your css and javascript into single files is a good idea and reco
 `lib/internal/Magento/Framework/View/Asset/MergeService.php`
 
 {% highlight php startinline=true %}
+<?php
 public function getMergedAssets(array $assets, $contentType)
 {
     $isCss = $contentType == 'css';
